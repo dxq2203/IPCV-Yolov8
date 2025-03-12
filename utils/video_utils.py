@@ -1,3 +1,4 @@
+#utilities to read video and save video
 import cv2
 
 def read_video(video_path):
@@ -11,8 +12,12 @@ def read_video(video_path):
     return frames
 
 def save_video(ouput_video_frames,output_video_path):
-    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    fourcc = cv2.VideoWriter_fourcc(*'XVID') # read the file as output format
+
+    #number of frame per second: 24
     out = cv2.VideoWriter(output_video_path, fourcc, 24, (ouput_video_frames[0].shape[1], ouput_video_frames[0].shape[0]))
     for frame in ouput_video_frames:
         out.write(frame)
     out.release()
+    
+    
