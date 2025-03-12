@@ -1,5 +1,5 @@
-input_videos/
-models/
-output_videos/
-runs/
-stubs/
+input_videos/*
+models/*
+output_videos/*
+runs/*
+stubs/*
